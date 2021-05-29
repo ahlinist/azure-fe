@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+      - name: Assemble jar
+        run: ./gradlew assemble
       - name: build image
         run: docker build -t azuredemok8s/azure-fe .
       - name: Azure Container Registry Login
