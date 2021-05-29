@@ -22,6 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: build image
+        run: echo docker build -t azuredemok8s/azure-fe .
       - name: Azure Container Registry Login
         uses: Azure/docker-login@v1
         with:
