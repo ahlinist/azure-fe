@@ -1,0 +1,6 @@
+com/example/demo/AzureFeApplication.java
+ com.example.demo.AzureFeApplication
+com/example/demo/controller/DemoController.java
+ com.example.demo.controller.DemoController
+com/example/demo/client/BackendClient.java
+ com.example.demo.client.BackendClient
