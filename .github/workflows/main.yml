@@ -27,7 +27,7 @@ jobs:
       - name: Assemble jar
         run: ./gradlew assemble
       - name: build image
-        run: docker build -t azuredemok8s.azurecr.io/azure-fe .
+        run: docker build -t azuredemok8s.azurecr.io/azure-fe:${{ github.run_number }} .
       - name: Azure Container Registry Login
         uses: Azure/docker-login@v1
         with:
@@ -39,4 +39,4 @@ jobs:
           login-server: https://azuredemok8s.azurecr.io
 
       - name: push image
-        run: docker push azuredemok8s.azurecr.io/azure-fe
+        run: docker push azuredemok8s.azurecr.io/azure-fe:${{ github.run_number }}
