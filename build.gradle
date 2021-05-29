@@ -27,7 +27,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.azure.spring:azure-spring-boot-starter'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-fabric8-all'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-fabric8-all'
 	implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
