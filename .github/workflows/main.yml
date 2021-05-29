@@ -37,3 +37,6 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
           # Container registry server url
           login-server: https://azuredemok8s.azurecr.io
+
+      - name: push image
+        run: docker push https://azuredemok8s.azurecr.io/azure-fe
