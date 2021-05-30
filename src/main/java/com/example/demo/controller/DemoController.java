@@ -20,4 +20,9 @@ public class DemoController {
     public String goodEvening() {
         return backendClient.goodEvening();
     }
+
+    @GetMapping("/")
+    public String health() {
+        return "OK";
+    }
 }
