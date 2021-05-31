@@ -42,6 +42,6 @@ public class DemoController {
             throw new RuntimeException("ERROR!!!");
         }
 
-        return "Invoice " + id + "has been processed";
+        return "Invoice " + id + " has been processed";
     }
 }
