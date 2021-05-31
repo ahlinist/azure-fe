@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -43,5 +44,14 @@ public class DemoController {
         }
 
         return "Invoice " + id + " has been processed";
+    }
+
+    @GetMapping("/invoices/stats")
+    public Map<String, String> getStats() {
+        return Map.of(
+                "todayTotal", "3000",
+                "todaySuccessful", "2999",
+                "todayFailed", "1"
+        );
     }
 }
