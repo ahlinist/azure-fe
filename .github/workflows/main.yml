@@ -27,7 +27,7 @@ jobs:
       - name: Assemble jar
         run: ./gradlew assemble
       - name: build image
-        run: docker build -t azuredemok8s.azurecr.io/azure-fe:${{ github.run_number }} .
+        run: docker build -t appsvc.azurecr.io/azure-fe:${{ github.run_number }} .
       - name: Azure Container Registry Login
         uses: Azure/docker-login@v1
         with:
@@ -36,7 +36,7 @@ jobs:
           # Container registry password
           password: ${{ secrets.ACR_PASSWORD }}
           # Container registry server url
-          login-server: https://azuredemok8s.azurecr.io
+          login-server: https://appsvc.azurecr.io
 
       - name: push image
-        run: docker push azuredemok8s.azurecr.io/azure-fe:${{ github.run_number }}
+        run: docker push appsvc.azurecr.io/azure-fe:${{ github.run_number }}
