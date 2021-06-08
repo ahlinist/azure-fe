@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
+
+    private static int ID = new Random().nextInt(10 - 1 + 1) + 1;
 
     private final BackendClient backendClient;
 
@@ -53,5 +56,10 @@ public class DemoController {
                 "todaySuccessful", "2999",
                 "todayFailed", "1"
         );
+    }
+
+    @GetMapping("/id")
+    public int id() {
+        return ID;
     }
 }
